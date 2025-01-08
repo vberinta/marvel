@@ -1,0 +1,63 @@
+/* DEOCAMDATA ASTA DA MODIFIC LA URMA SI IL FAC MAI FAIN  */
+body {
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    color: #333;
+}
+
+button {
+    background-color: #008CBA;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #005f6a;
+}
+
+
+/* styles.css */
+
+/* Menu styles */
+#menu {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+#menu nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu nav ul li {
+    margin-right: 20px;
+}
+
+#menu nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+#menu nav ul li a:hover {
+    background-color: #444;
+    border-radius: 5px;
+}
+
+/* Hide the menu when the user is not logged in */
+#menu {
+    display: none;
+}

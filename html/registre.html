@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro Usuario</title>
+    <script src="dades.js"></script>
+    <!-- Enlazamos con el archivo que contiene los datos de las poblaciones y codigos postales -->
+    <script src="registre.js"></script>
+    <!-- Enlazamos con el archivo javacript con las validaciones -->
+    <script src="classes.js"></script>
+    <!-- Enlazamos con el archivo javacript con las clases para poder guardar el usuario -->
+  </head>
+  <body>
+    <!-- Creamos el formulario para registrarse -->
+    <h2>Registrate</h2>
+    <form id="formulario">
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name" required />
+      <br />
+      <br />
+
+      <label for="surname">Apellito:</label>
+      <input type="text" id="surname" name="surname" required />
+      <br />
+      <br />
+
+      <label for="address">Direccion:</label>
+      <input type="text" id="address" name="address" required />
+      <br />
+      <br />
+
+      <!--creamos el laber para seleccionar la poblacion asegurandonos de llamar a la funcion para actualizar el codigo postal una vez se seleccione la ciudad -->
+      <label for="city">Poblacion:</label>
+      <select id="city" name="city" onchange="actualizaCodigoPostal()" required>
+        <option value="">Seleccionar</option>
+      </select>
+      <br />
+      <br />
+
+      <label for="postalCode">Codigo Postal:</label>
+      <input type="text" id="postalCode" name="postalCode" readonly />
+      <br />
+      <br />
+
+      <label for="email">Correo:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        oninput="modificarCorreo()"
+      />
+      <!--llamamos a la funcion para que autocomplete el correo-->
+      <br />
+      <br />
+
+      <label for="user">Usuario:</label>
+      <input type="text" id="user" name="user" required />
+      <br />
+      <br />
+
+      <label for="password">Contraseña:</label>
+      <input type="password" id="password" name="password" required />
+      <br />
+      <br />
+ <!--finalmente llamamos a la funcion saveUser() cuando hacemos click para guardar el usuario-->
+      <button type="button" onclick="saveUser()">Guardar</button>
+    </form>
+  </body>
+</html>
